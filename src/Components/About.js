@@ -6,7 +6,7 @@ import axios from 'axios';
 function About() {
 
     const [apps, setApp] = useState([]);
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
  
     useEffect(() => {
         fetchApp();
@@ -33,9 +33,9 @@ function About() {
             console.log('There was an error deleting the vehicle data!',error);
         })
     }
-    // function handleUpdate(id) {
-    //     navigate(`/update-vehical/${id}`);
-    // }
+    function handleUpdate(id) {
+        navigate(`/update/${id}`);
+    }
 
 
     return (
@@ -49,14 +49,14 @@ function About() {
                             {/* <img src={vehicle.image} className="card-img-top" height={250} alt={vehicle.name} /> */}
                             <div className="card-body">
                                 <h5 className="card-title">{app.name}</h5>
-                                <p className="card-text">Price: ${app.description}</p>
-                                <p className="card-text">Mileage: {app.releaseDate}</p>
-                                <p className="card-text">Seats: {app.version}</p>
-                                <p className="card-text">Color: {app.ratings}</p>
-                                <p className="card-text">Fuel: {app.genre}</p>
+                                <p className="card-text">Description: {app.description}</p>
+                                <p className="card-text">Release Date: {app.releaseDate}</p>
+                                <p className="card-text">Version: {app.version}</p>
+                                <p className="card-text">Rating: {app.ratings}</p>
+                                <p className="card-text">Genre: {app.genre}</p>
                                 
                                 <button type="button" className="btn btn-danger me-2" onClick={()=>handleDelete(app.id)}>Delete</button>
-                                {/* <button type="button" className="btn btn-primary" onClick={() => handleUpdate(vehicle.id)}>Update</button> */}
+                                <button type="button" className="btn btn-primary" onClick={() => handleUpdate(app.id)}>Update</button>
                             </div>
                         </div>
                     </div>
