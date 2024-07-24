@@ -1,0 +1,40 @@
+{
+  "applications": [
+    {
+      "name": "Super Game",
+      "description": "An exciting adventure game.",
+      "releaseDate": "2024-01-15",
+      "version": "1.0.0",
+      "ratings": 4.5,
+      "genre": "Adventure",
+      "id": "1"
+    },
+    {
+      "name": "Beauty Enhancer",
+      "description": "A beauty app with various filters.",
+      "releaseDate": "2023-05-22",
+      "version": "2.3.1",
+      "ratings": 4.8,
+      "genre": "Beauty",
+      "id": "2"
+    },
+    {
+      "name": "Women's Health Monitor",
+      "description": "Track and improve your health.",
+      "releaseDate": "2023-12-01",
+      "version": "3.0.0",
+      "ratings": 4.7,
+      "genre": "Women",
+      "id": "4"
+    },
+    {
+      "id": "",
+      "name": "TestApp",
+      "description": "Testing the app",
+      "releaseDate": "2024-07-24",
+      "version": "1.2",
+      "ratings": 1,
+      "genre": "Test Genre"
+    }
+  ]
+}
