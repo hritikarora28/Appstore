@@ -1,12 +1,13 @@
 import { useFormik} from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
-import { version } from 'react';
+import { useNavigate} from 'react-router-dom';
 
 
 
 
 function AddApp(){
+    const navigate = useNavigate();
     const formik = useFormik(
         {
             initialValues: {
@@ -36,6 +37,7 @@ function AddApp(){
                     .then(response => {
                         setStatus('success');
                         resetForm();
+                        navigate('/about');
                     })
                     .catch(error => {
                         setStatus('error');

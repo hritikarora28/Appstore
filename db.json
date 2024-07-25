@@ -6,7 +6,7 @@
       "description": "A beauty app with various filters.",
       "releaseDate": "2023-05-22",
       "version": 2.3,
-      "ratings": 4.8,
+      "ratings": 4.5,
       "genre": "Beauty",
       "id": "2"
     },
@@ -39,6 +39,16 @@
       "ratings": 4.6,
       "genre": "Health",
       "id": "5"
+    },
+    {
+      "id": "9",
+      "img": "https://images.pexels.com/photos/27219380/pexels-photo-27219380/free-photo-of-dice-numbers-on-wooden-board.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "name": "Super Game",
+      "description": "It's a super game used for the super gaming",
+      "releaseDate": "2024-07-26",
+      "version": 1,
+      "ratings": 2,
+      "genre": "Gaming"
     }
   ]
 }
