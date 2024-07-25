@@ -10,6 +10,7 @@ function AddApp(){
     const formik = useFormik(
         {
             initialValues: {
+                img:'',
                 name:'',
                 description:'',
                 releaseDate:'',
@@ -21,6 +22,7 @@ function AddApp(){
                 
             },
             validationSchema: Yup.object({
+                img:Yup.string().required("Image is required"),
                 name: Yup.string().min(5, 'Name atlease should have 5 characters').required('Name of the app in required'),
                 releaseDate: Yup.date().required('Date is Required'),
                 ratings: Yup.number().min(1,'Rating atleast be zero').required('Rating is reuired'),
@@ -51,27 +53,27 @@ function AddApp(){
         <div className='container mt-4'>
             <h2>Add New Application</h2>
             <form onSubmit={formik.handleSubmit}>
-                {/* <div className='mb-3'>
-                    <label htmlFor='image' className='form-label'>Image URL</label>
+                <div className='mb-3'>
+                    <label htmlFor='img' className='form-label'>Image URL</label>
                     <input
-                        id="image"
-                        name="image"
+                        id="img"
+                        name="img"
                         type="text"
                         className='form-control'
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        value={formik.values.image}
-                        data-testid="image"
+                        value={formik.values.img}
+                        data-testid="img"
                     />
 
 
                     {
-                        formik.touched.image && formik.errors.image ? <div className='text-danger'>{formik.errors.image}</div>
+                        formik.touched.img && formik.errors.imag ? <div className='text-danger'>{formik.errors.img}</div>
                         : null
 
 
                     }  
-                </div> */}
+                </div>
 
 
 

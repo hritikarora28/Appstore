@@ -25,7 +25,7 @@ function Update() {
         enableReinitialize: true,
 
         initialValues: {
-            // image: app?.image || '',
+            img: app?.img || '',
             name: app?.name || '',
             description: app?.description|| '',
             releaseDate: app?.releaseDate|| '',
@@ -36,7 +36,7 @@ function Update() {
             // description: app?.description || ''
         },
         validationSchema: Yup.object({
-            // image: Yup.string().required('Image URL is required'),
+            img: Yup.string().required('Image URL is required'),
             name: Yup.string().min(3, 'App name must be at least 3 characters').required('App name is required'),
             version: Yup.number().min(0, 'version must be greater than 0').required('Version is required'),
             ratings: Yup.number().min(0, 'Ratings must be greater than 0').max(5, 'Ratings must be less than 5').required('Ratings is required'),
@@ -67,27 +67,27 @@ function Update() {
         <div className='container mt-4'>
             <h2>Add New App</h2>
             <form onSubmit={formik.handleSubmit}>
-                {/* <div className='mb-3'>
+                <div className='mb-3'>
                     <label htmlFor='image' className='form-label'>Image URL</label>
                     <input
-                        id="image"
+                        id="img"
                         name="image"
                         type="text"
                         className='form-control'
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        value={formik.values.image}
+                        value={formik.values.img}
                         data-testid="image"
                     />
 
 
                     {
-                        formik.touched.image && formik.errors.image ? <div className='text-danger'>{formik.errors.image}</div>
+                        formik.touched.img && formik.errors.img ? <div className='text-danger'>{formik.errors.img}</div>
                             : null
 
 
                     }
-                </div> */}
+                </div>
 
 
 

@@ -46,7 +46,7 @@ function About() {
                 {apps.map(app => (
                     <div className="col-md-4 mb-4" key={app.id}>
                         <div className="card h-100">
-                            {/* <img src={vehicle.image} className="card-img-top" height={250} alt={vehicle.name} /> */}
+                            <img src={app.img} className="card-img-top" height={250} alt={app.name} />
                             <div className="card-body">
                                 <h5 className="card-title">{app.name}</h5>
                                 <p className="card-text">Description: {app.description}</p>

@@ -1,15 +1,7 @@
 {
   "applications": [
     {
-      "name": "Super Game 2",
-      "description": "An exciting adventure game.",
-      "releaseDate": "2024-01-15",
-      "version": 10.2,
-      "ratings": 4.5,
-      "genre": "Adventure",
-      "id": "1"
-    },
-    {
+      "img": "https://images.pexels.com/photos/2036099/pexels-photo-2036099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Beauty Enhancer",
       "description": "A beauty app with various filters.",
       "releaseDate": "2023-05-22",
@@ -19,6 +11,7 @@
       "id": "2"
     },
     {
+      "img": "https://images.pexels.com/photos/11122540/pexels-photo-11122540.jpeg?auto=compress&cs=tinysrgb&w=600",
       "name": "Fashion Forward",
       "description": "Your ultimate fashion guide.",
       "releaseDate": "2024-03-10",
@@ -28,6 +21,7 @@
       "id": "3"
     },
     {
+      "img": "https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Women's Health Monitor",
       "description": "Track and improve your health.",
       "releaseDate": "2023-12-01",
@@ -37,6 +31,7 @@
       "id": "4"
     },
     {
+      "img": "https://images.pexels.com/photos/2827392/pexels-photo-2827392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "name": "Wellness App",
       "description": "A comprehensive wellness tracker.",
       "releaseDate": "2024-07-05",
