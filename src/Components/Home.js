@@ -18,13 +18,13 @@ const Home = () => {
         </ol>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img className="d-block w-100 h-100" src="https://images.pexels.com/photos/4895421/pexels-photo-4895421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="First slide" />
+            <img className="d-block w-100 h-100" src="https://media.istockphoto.com/id/500474033/photo/business-man-using-tablet-pc.jpg?s=1024x1024&w=is&k=20&c=5j-Ls_33jDh8Tnbz_iDbEJj1uJx5uv_EcJw3suwxvoA=" alt="First slide" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100 h-100" src="https://images.pexels.com/photos/4895416/pexels-photo-4895416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Second slide" />
+            <img className="d-block w-100 h-100" src="https://media.istockphoto.com/id/877780596/photo/earth.jpg?s=1024x1024&w=is&k=20&c=tucS4AFhxRl1jSTIq7wR9GLS-VmO04SPcGS6BeHez8k=" alt="Second slide" />
           </div>
           <div className="carousel-item">
-            <img className="d-block w-100 h-100" src="https://images.pexels.com/photos/4895450/pexels-photo-4895450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Third slide" />
+            <img className="d-block w-100 h-100" src="https://media.istockphoto.com/id/940458676/photo/hand-using-laptop-with-application-icons-flying-around.jpg?s=1024x1024&w=is&k=20&c=97gVtwm5ErzoMahSvgvYQoz4n5kjT8c8gjwG3Z_eUMw=" alt="Third slide" />
           </div>
         </div>
         <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
