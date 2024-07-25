@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import ErrorBoundary from "./Components/ErrorBoundary";
 import './App.css';
 import {Route, Routes} from "react-router-dom"
 import Menu from "./Components/Menu"
@@ -8,9 +9,12 @@ import AddApps from './Components/AddApp';
 import About from './Components/About';
 import Update from './Components/Update';
 
+
+
 function App() {
   return(
     <>
+       <ErrorBoundary>
  <Menu/>
  <Routes>
  <Route path="/" element={<Home/>}/>
@@ -19,6 +23,7 @@ function App() {
  <Route path="/update/:id" element={<Update/>}/>
   </Routes>
  <Footer/>
+ </ErrorBoundary>
  </>
   ) 
 }

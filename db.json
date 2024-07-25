@@ -4,7 +4,7 @@
       "name": "Super Game 2",
       "description": "An exciting adventure game.",
       "releaseDate": "2024-01-15",
-      "version": 1.2,
+      "version": 10.2,
       "ratings": 4.5,
       "genre": "Adventure",
       "id": "1"
@@ -13,7 +13,7 @@
       "name": "Beauty Enhancer",
       "description": "A beauty app with various filters.",
       "releaseDate": "2023-05-22",
-      "version": "2.3.1",
+      "version": 2.3,
       "ratings": 4.8,
       "genre": "Beauty",
       "id": "2"
@@ -22,7 +22,7 @@
       "name": "Fashion Forward",
       "description": "Your ultimate fashion guide.",
       "releaseDate": "2024-03-10",
-      "version": "1.2.0",
+      "version": 1.2,
       "ratings": 4.2,
       "genre": "Fashion",
       "id": "3"
@@ -31,7 +31,7 @@
       "name": "Women's Health Monitor",
       "description": "Track and improve your health.",
       "releaseDate": "2023-12-01",
-      "version": "3.0.0",
+      "version": 3,
       "ratings": 4.7,
       "genre": "Women",
       "id": "4"
@@ -40,7 +40,7 @@
       "name": "Wellness App",
       "description": "A comprehensive wellness tracker.",
       "releaseDate": "2024-07-05",
-      "version": "2.0.5",
+      "version": 2,
       "ratings": 4.6,
       "genre": "Health",
       "id": "5"

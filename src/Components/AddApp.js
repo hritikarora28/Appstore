@@ -1,6 +1,7 @@
 import { useFormik} from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
+import { version } from 'react';
 
 
 
@@ -23,6 +24,7 @@ function AddApp(){
                 name: Yup.string().min(5, 'Name atlease should have 5 characters').required('Name of the app in required'),
                 releaseDate: Yup.date().required('Date is Required'),
                 ratings: Yup.number().min(1,'Rating atleast be zero').required('Rating is reuired'),
+                version:Yup.number().required("Version is required"),
                 id:Yup.string().required("Id is required")
                 
             })
@@ -156,7 +158,7 @@ function AddApp(){
                     <input
                         id="version"
                         name="version"
-                        type="text"
+                        type="number"
                         className='form-control'
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
