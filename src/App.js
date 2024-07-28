@@ -1,31 +1,62 @@
-import logo from './logo.svg';
-import ErrorBoundary from "./Components/ErrorBoundary";
-import './App.css';
-import {Route, Routes} from "react-router-dom"
-import Menu from "./Components/Menu"
-import Footer from './Components/Footer';
-import Home from './Components/Home';
-import AddApps from './Components/AddApp';
-import About from './Components/About';
-import Update from './Components/Update';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Menu from "./Components/Menu";
+import { lazy, Suspense } from "react";
+import Footer from "./Components/Footer";
+// import Contacts from "./Components/Contacts";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { AuthProvider, AuthContext } from './Context/AuthContext';
+import { useContext } from 'react';
+import ErrorBoundary from './Components/ErrorBoundary';
+
+// Lazy-loaded components
+const Home = lazy(() => import("./Components/Home"));
+const AddApp = lazy(() => import("./Components/AddApp"));
+const AppList = lazy(() => import("./Components/AppList"));
+const Update= lazy(() => import("./Components/Update"));
+const About = lazy(() => import("./Components/About"));
+const Login = lazy(() => import("./Components/Login"));  
+const Register = lazy(() => import("./Components/Register"));  
+
+// Placeholder for ProtectedRoute component
+const ProtectedRoute = ({ role, children }) => {
+  const { user } = useContext(AuthContext);
+  if (!user || user.role !== role) {
+    return <Navigate to="/" />;
+  }
+  return children;
+};
 
 
 
 function App() {
-  return(
-    <>
-       <ErrorBoundary>
- <Menu/>
- <Routes>
- <Route path="/" element={<Home/>}/>
- <Route path="/about" element={<About/>}/>
- <Route path="/addApps" element={<AddApps/>}/>
- <Route path="/update/:id" element={<Update/>}/>
-  </Routes>
- <Footer/>
- </ErrorBoundary>
- </>
-  ) 
+  return (
+    <AuthProvider>
+      <>
+        <Menu />
+        <ErrorBoundary>
+          <Suspense fallback={<div>Loading.....</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/About" element={<About />} />
+              <Route path="/add-application" element={
+                <ProtectedRoute role="admin">
+                  <AddApp />
+                </ProtectedRoute>
+              } />
+              {/* <Route path="/Contacts" element={<Contacts />} /> */}
+              <Route path="/applicationlist" element={<AppList />} />
+              <Route path="/update/:id" element={<Update/>} />
+              <Route path="/login" element={<Login />} /> 
+              <Route path="/register" element={<Register />} /> 
+              
+            </Routes>
+          </Suspense>
+        </ErrorBoundary>
+        <Footer />
+      </>
+    </AuthProvider>
+  );
 }
 
 export default App;

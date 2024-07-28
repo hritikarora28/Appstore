@@ -1,0 +1,26 @@
+h1 {
+    color: red;
+  }
+  
+  p {
+    color:  #6c757d; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:x-large;
+  }
+  
+  
+  .card-img-top {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+  }
+  
+ 
+  .our-services h4 {
+    color: #17a2b8; 
+  }
+  
+  .our-services p {
+    color: #6c757d; 
+  }
+  

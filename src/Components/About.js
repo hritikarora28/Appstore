@@ -1,70 +1,96 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from 'axios';
 
+import React from 'react';
 
 function About() {
-
-    const [apps, setApp] = useState([]);
-    const navigate = useNavigate();
- 
-    useEffect(() => {
-        fetchApp();
-        
-    }, []);
-    function fetchApp(){
-        axios.get('http://localhost:5000/applications')
-            .then(response => {
-                setApp(response.data);
-            })
-            .catch(error => {
-                console.log('There was an error fetching the vehicles data!', error);
-            });
-    }
-
-
-   
-    function handleDelete(id){
-        axios.delete(`http://localhost:5000/applications/${id}`)
-        .then(()=>{
-            fetchApp();
-        })
-        .catch(error=>{
-            console.log('There was an error deleting the vehicle data!',error);
-        })
-    }
-    function handleUpdate(id) {
-        navigate(`/update/${id}`);
-    }
-
-
-    return (
-        <div className="container mt-4">
-            <h2 className="mb-4">App List</h2>
-            {/* <AddVehicle></AddVehicle> */}
-            <div className="row">
-                {apps.map(app => (
-                    <div className="col-md-4 mb-4" key={app.id}>
-                        <div className="card h-100">
-                            <img src={app.img} className="card-img-top" height={250} alt={app.name} />
-                            <div className="card-body">
-                                <h5 className="card-title">{app.name}</h5>
-                                <p className="card-text">Description: {app.description}</p>
-                                <p className="card-text">Release Date: {app.releaseDate}</p>
-                                <p className="card-text">Version: {app.version}</p>
-                                <p className="card-text">Rating: {app.ratings}</p>
-                                <p className="card-text">Genre: {app.genre}</p>
-                                
-                                <button type="button" className="btn btn-danger me-2" onClick={()=>handleDelete(app.id)}>Delete</button>
-                                <button type="button" className="btn btn-primary" onClick={() => handleUpdate(app.id)}>Update</button>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
+  return (
+    <div>
+      <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div className="col-10 col-sm-8 col-lg-6">
+          <img 
+            src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+            className="d-block mx-lg-auto img-fluid" 
+            alt="Bootstrap Themes" 
+            width="700" 
+            height="500" 
+            loading="lazy" 
+          />
         </div>
-    );
+        <div className="col-lg-6">
+          <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">App Store</h1>
+          <p className="lead">
+          Explore a vast selection of apps, each vetted for quality, privacy, and security. Our curated store ensures you find only the best for your digital needs. Enhance your experience with confidence and ease.
+          </p>
+          <div className="d-grid gap-2 d-md-flex justify-content-md-start">
+            <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Apps</button>
+            <button type="button" className="btn btn-outline-secondary btn-lg px-4">Contact Us</button>
+          </div>
+        </div>
+      </div>
 
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div className="col">
+          <div className="card h-100">
+            <img 
+              src="https://images.pexels.com/photos/1174746/pexels-photo-1174746.jpeg?auto=compress&cs=tinysrgb&w=600" 
+              className="card-img-top" 
+              height={300} 
+              alt="..." 
+            />
+            <div className="card-body">
+              <h5 className="card-title">Games</h5>
+              <p className="card-text">
+                Feature that enables you to experience the adventure and HD resolution games .
+              </p>
+            </div>
+            <div className="card-footer">
+              <small className="text-body-secondary">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div className="col">
+          <div className="card h-100">
+            <img 
+              src="https://images.pexels.com/photos/1472887/pexels-photo-1472887.jpeg?auto=compress&cs=tinysrgb&w=600" 
+              className="card-img-top" 
+              height={300} 
+              alt="..." 
+            />
+            <div className="card-body">
+              <h5 className="card-title">Fitness</h5>
+              <p className="card-text">
+              A fitness app provides workout programs, diet instructions, nutrient info, and even live healthcare coaching to help users achieve their goals. Artificial intelligence and machine learning build
+               personalized training routines for its customers in these apps.
+              </p>
+            </div>
+            <div className="card-footer">
+              <small className="text-body-secondary">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+        <div className="col">
+          <div className="card h-100">
+            <img 
+              src="https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=600" 
+              className="card-img-top" 
+              height={300} 
+              alt="..." 
+            />
+            <div className="card-body">
+              <h5 className="card-title">Stock Market</h5>
+              <p className="card-text">
+                Invest your hard earned money in stocks like equity,Intrday for a better future.
+              Stocks are shares of ownership in a public company, and the stock market is where 
+              investors connect to buy and sell investments like stocks.
+              </p>
+            </div>
+            <div className="card-footer">
+              <small className="text-body-secondary">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default About;
